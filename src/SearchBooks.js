@@ -43,11 +43,10 @@ class ListBooks extends React.Component {
                    { results.map( (book) => (
                       <li key={book.id}>
                         <div className="book">
-                        {console.log(typeof book.imageLinks.thumbnail) }
                           <div className="book-top">
 
-    {  book.imageLinks.thumbnail !== undefined && 
-               <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail}`}}></div>
+    {  book.imageLinks !== undefined && (
+    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail}`}}></div> )
     }
      
 

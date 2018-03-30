@@ -30,17 +30,13 @@ class ListBooks extends React.Component {
             {
               results = results.filter(e => e !== result)
               results.push(book)
-            }
-            
-          }
-        )} )
-
+            }})} )
           this.setState({ results })
  
               }         
-          
-          } )
             } 
+          )
+        } 
       
 
   render() {
@@ -69,8 +65,7 @@ class ListBooks extends React.Component {
             <ol className="books-grid">
               {results.map(book => (
                 <li key={book.id}>
-                {console.log(book)}
-                  <div className="book">
+                   <div className="book">
                     <div className="book-top">
                       {book.imageLinks !== undefined && (
                         <div

@@ -5,8 +5,13 @@ This React App allows you to search for books and add them to various states of 
 
 ## Installation Instructions
 
+Instructions for npm:
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
+
+Alternative instructions if you are using yarn:
+* install all project dependencies with `yarn`
+* start the development server with `yarn start`
 
 ## What You're Getting
 ```bash

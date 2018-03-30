@@ -36,9 +36,7 @@ class ListBooks extends React.Component {
                             style={{
                               width: 128,
                               height: 193,
-                              backgroundImage: `url(${
-                                book.imageLinks.thumbnail
-                              }`
+                              backgroundImage: `url(${book.imageLinks.thumbnail}`
                             }}
                           />
                           <div className="book-shelf-changer">
@@ -51,9 +49,7 @@ class ListBooks extends React.Component {
                               <option value="none" disabled>
                                 Move to...
                               </option>
-                              <option value="currentlyReading">
-                                Currently Reading
-                              </option>
+                              <option value="currentlyReading">Currently Reading</option>
                               <option value="wantToRead">Want to Read</option>
                               <option value="read">Read </option>
                               <option value="none">None</option>
@@ -82,9 +78,7 @@ class ListBooks extends React.Component {
                             style={{
                               width: 128,
                               height: 193,
-                              backgroundImage: `url(${
-                                book.imageLinks.thumbnail
-                              }`
+                              backgroundImage: `url(${book.imageLinks.thumbnail}`
                             }}
                           />
                           <div className="book-shelf-changer">
@@ -97,9 +91,7 @@ class ListBooks extends React.Component {
                               <option value="none" disabled>
                                 Move to...
                               </option>
-                              <option value="currentlyReading">
-                                Currently Reading
-                              </option>
+                              <option value="currentlyReading">Currently Reading</option>
                               <option value="wantToRead">Want to Read</option>
                               <option value="read">Read </option>
                               <option value="none">None</option>
@@ -128,9 +120,7 @@ class ListBooks extends React.Component {
                             style={{
                               width: 128,
                               height: 193,
-                              backgroundImage: `url(${
-                                book.imageLinks.thumbnail
-                              }`
+                              backgroundImage: `url(${book.imageLinks.thumbnail}`
                             }}
                           />
                           <div className="book-shelf-changer">
@@ -143,9 +133,7 @@ class ListBooks extends React.Component {
                               <option value="none" disabled>
                                 Move to...
                               </option>
-                              <option value="currentlyReading">
-                                Currently Reading
-                              </option>
+                              <option value="currentlyReading">Currently Reading</option>
                               <option value="wantToRead">Want to Read</option>
                               <option value="read">Read </option>
                               <option value="none">None</option>

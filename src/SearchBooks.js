@@ -4,27 +4,60 @@ import * as BooksAPI from "./BooksAPI";
 import { DebounceInput } from "react-debounce-input";
 
 class ListBooks extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.updateQuery = this.updateQuery.bind(this);
+  }
+
   state = {
     query: "",
     results: undefined
   };
 
+ 
+
   updateQuery = query => {
-    this.setState({ query: query });
+    this.setState({ query: query })
+
+    function remove(array, element) {
+      return array.filter(e => e !== element);
+  }
 
     BooksAPI.search(query).then(results => {
       if (results.error) {
         this.setState({ results: undefined });
       } else {
-        this.setState({ results: results });
-      }
-    });
-    console.log(this.state.results);
-  };
+        
+        console.log("INSTANTIATE finalResults")
+        //console.log(this.props.books)
+        let finalResults = []
+
+        results.map(result => {
+                   
+
+           this.props.books.filter(function(book) {  
+            if ( result.id === book.id ) 
+            {
+              results = results.filter(e => e !== result)
+              results.push(book)
+            }
+            
+          }
+        )} )
+
+          console.log(results)
+          this.setState({ results })
+ 
+              }         
+          
+          } )
+            } 
+      
 
   render() {
     const { query, results } = this.state;
-    const { handleChange } = this.props;
+    const { books, handleChange } = this.props;
 
     return (
       <div className="search-books">
@@ -48,6 +81,7 @@ class ListBooks extends React.Component {
             <ol className="books-grid">
               {results.map(book => (
                 <li key={book.id}>
+                {console.log(book)}
                   <div className="book">
                     <div className="book-top">
                       {book.imageLinks !== undefined && (

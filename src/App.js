@@ -22,9 +22,7 @@ class BooksApp extends React.Component {
   }
 
   handleChange(bookOb, shelfName) {
-    //console.log("Setting Book " + bookOb + " to Shelf " + shelfName)
     bookOb.shelf = shelfName;
-    //console.log(bookOb)
     BooksAPI.update(bookOb, shelfName)
       .then(
         this.setState(state => ({

@@ -30,7 +30,6 @@ class ListBooks extends React.Component {
                   {booksCurrentlyReading.map(book => (
                     <li key={book.id}>
                       <div className="book">
-                        {console.log(book)}
                         <div className="book-top">
                           <div
                             className="book-cover"
@@ -77,7 +76,6 @@ class ListBooks extends React.Component {
                   {booksWantToRead.map(book => (
                     <li key={book.id}>
                       <div className="book">
-                        {console.log(book)}
                         <div className="book-top">
                           <div
                             className="book-cover"
@@ -124,7 +122,6 @@ class ListBooks extends React.Component {
                   {booksRead.map(book => (
                     <li key={book.id}>
                       <div className="book">
-                        {console.log(book)}
                         <div className="book-top">
                           <div
                             className="book-cover"

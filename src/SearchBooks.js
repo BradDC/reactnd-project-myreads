@@ -27,6 +27,9 @@ class ListBooks extends React.Component {
               results = results.filter(e => e !== result);
               results.push(book);
             }
+            else {
+              result.shelf = "none";
+            }
           });
         });
         this.setState({ results });
